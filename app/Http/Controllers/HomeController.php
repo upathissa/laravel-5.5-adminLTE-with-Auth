@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        // // $role = Role::create(['name' => 'admin']);
+        $user = Auth::user();
+        // $user->assignRole('admin');
+
+        if($user->hasRole('admin')){
+            return view('home');
+        }else{
+            return view('noneAdmins');
+        }
+
     }
 }
