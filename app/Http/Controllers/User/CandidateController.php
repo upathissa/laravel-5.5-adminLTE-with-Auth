@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers\User;
 
+use DataTables;
+
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -81,5 +84,13 @@ class CandidateController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getUserdata()
+    {
+        // return "OK";
+
+       $users = User::all();
+        return Datatables::of($users)->make();
     }
 }

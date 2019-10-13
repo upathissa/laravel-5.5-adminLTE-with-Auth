@@ -7,7 +7,7 @@
             
             
             {{-- <form class="form-horizontal"> --}}
-                {!! Form::open(['route' => 'canditates.store','class' => 'form-horizontal']) !!}
+                {!! Form::open(['route' => 'candidates.store','class' => 'form-horizontal']) !!}
                 <div class="box-body">
                     <div class="col-md-6">
                         <div class="form-group">
@@ -19,9 +19,9 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            {!! Form::label('email', 'Email', ['class' => 'col-sm-2 control-label']) !!}
+                            {!! Form::label('mobile1', 'Mobile Number', ['class' => 'col-sm-2 control-label']) !!}
                             <div class="col-sm-10">
-                                {!! Form::text('email',null, ['class' => 'form-control']) !!}
+                                {!! Form::phoneNumber() !!}
                             </div>
                         </div>
                     </div>

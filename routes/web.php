@@ -20,5 +20,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::middleware(['auth'])->group(function () {
-    Route::resource('canditates','User\CandidateController');
+    Route::resource('candidates','User\CandidateController');
 });
+Route::get('onetwo','User\CandidateController@getUserdata')->name('data.users');

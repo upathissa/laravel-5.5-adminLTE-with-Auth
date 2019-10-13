@@ -31,7 +31,7 @@
             <li class="header">HEADER</li>
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="#"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-            <li><a href="#"><i class="fa fa-user"></i> <span>Candidates</span></a></li>
+            <li><a href="{{route('candidates.index')}}"><i class="fa fa-user"></i> <span>Candidates</span></a></li>
             <li class="treeview">
                 <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
                 <span class="pull-right-container">

@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // // $role = Role::create(['name' => 'admin']);
+        // $role = Role::create(['name' => 'admin']);
         $user = Auth::user();
         // $user->assignRole('admin');
 
